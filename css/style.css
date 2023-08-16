@@ -1,0 +1,260 @@
+*{
+  list-style: none;
+  
+}
+a{
+ text-decoration: none; 
+ cursor: pointer !important;
+}
+::-webkit-scrollbar{
+    width: 16px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #b7b7b7;
+    border: 4px solid #EDECE9;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #666666; 
+}
+::-webkit-scrollbar-track{
+    background-color: #EDECE9;}
+/* ========================================= */
+/* ======| section navbar home |====== */
+.navbar-home{
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  left: -50%;
+  transition: left .3s cubic-bezier(.53,.44,0,.79);
+}
+.nav{
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 0;
+  width: 50%;
+}
+.nav ul{
+  width: 90%;
+  border-radius: 7px;
+  overflow: hidden;
+  border: solid 1px #303030;
+}
+.nav ul li{
+  width: 100%;
+  background-color: rgb(38, 38, 38);
+  padding: 10px 15px;
+  border-bottom: solid 1px #ffffff00;
+  position: relative;
+  
+}
+.nav ul li::before{
+  content: "";
+  width: 93%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.186);
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+}
+.nav ul li:nth-last-child(1)::before{
+  width: 0;
+}
+.nav ul li:nth-last-child(1){
+  border-bottom: none;
+}
+.nav a{
+  color: #ffffff;
+  font-size: 1.25rem;
+  transition: all .3s;
+  text-decoration: none;
+}
+.nav a:hover{
+  color: #dc3545;
+}
+.close-nav{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  padding: 5px;
+  font-size: 30px;
+  border: 1px solid #ffffff37;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.close-nav:hover{
+  border: 1px solid red;
+  color: red;
+}
+.opneNav i{
+  cursor: pointer;
+  transition: all .3s;
+}
+.opneNav i:hover{
+  color: green;
+}
+
+@media only screen and (max-width: 500px){
+  .nav ul{
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* ========================================= */
+/* ======| section -> header home |====== */
+.vh-90{
+  height: 90vh;
+}
+h1{
+  font-size: 4rem;
+}
+.section-background{
+  background-image: url(../images/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ========================================= */
+/* ======| section -> Details home |====== */
+.sectionDetails{
+  width: 100%;
+}
+.Details{
+  width: 60%;
+  border-right: #8f969b solid 1px;
+  border-left: #8f969b solid 1px;
+
+  
+}
+.Details-ad{
+  width: 100%;
+  background: #8f969b;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;  
+  border-bottom: solid 1px #eeeeee00;
+  
+}
+
+.Details-ad::before{
+  content: '';
+  width: 93%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  background-color: #ffffff48;
+
+}
+.Details-text{
+  background: #ffffff;
+  display: none;
+}
+.Details-text-one{
+  display: block;
+}
+@media only screen and (max-width: 1200px){
+	/*Big smartphones [993px -> 992px]*/
+  .Details{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 992px){
+	/*Big smartphones [426px -> 992px]*/
+  .Details{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+  .Details{
+    width: 100%;
+  }
+}
+/* <!--======| section -> Duration home |======--> */
+.section-Duration{
+  background-image: url(../images/2.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-Duration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+  color: #ffffff;
+}
+/* ========================================= */
+/* ======| section -> footer |====== */
+.footer-icon{
+  display: flex;
+  margin-left: 5px;
+}
+.footer-icon a{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #000 solid 1px;
+  margin-left: 5px;
+  padding: 10px;
+  color: #000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.footer-icon a:hover{
+  background-color: #aa3939;
+  color: #ffffff;
+  border: #aa3939 solid 1px;
+}
+
+
+.line-number{
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #eaeaea;
+
+}
+.line-color{
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 0%;
+ height: 3px;
+ border-radius: 5px;
+ background-color: #aa3939;
+}
+.bg-red{
+ background-color: #aa3939;
+}
+.zero{
+  color: #aa3939 !important;
+}
